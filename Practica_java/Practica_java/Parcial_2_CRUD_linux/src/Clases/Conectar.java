@@ -23,7 +23,9 @@ public class Conectar {
             cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/bd","root","");
             System.out.println("Conectado");
         } catch (Exception e) {
+            System.out.println("No se pudo realizar la conexión");
             System.err.println(e.getMessage());
+
         }
         return cn;
     }
