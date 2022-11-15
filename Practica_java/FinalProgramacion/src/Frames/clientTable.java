@@ -4,8 +4,17 @@
  */
 package Frames;
 
+import Clases.Conectar;
 import java.awt.Color;
-
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author marcelo
@@ -18,9 +27,68 @@ public class clientTable extends javax.swing.JFrame {
      * Creates new form clientTable
      */
     public clientTable() {
+        limpiar();
+        mostrartabla("");
         initComponents();
+        
+    }
+    
+    void limpiar(){
+        idClienteTxt.setText("");
+        apellidoClienteTxt.setText("");
+        nombreClienteTxt.setText("");
+        telefonoClienteTxt.setText("");
+        correoClienteTxt.setText("");
+        dniClienteTxt.setText("");
+        System.out.println("funco");
     }
 
+    void mostrartabla(String valor){
+        
+        DefaultTableModel modelo=new DefaultTableModel();
+        
+        modelo.addColumn("id_cliente");
+        modelo.addColumn("nombre_cliente");
+        modelo.addColumn("apellido_cliente");
+        modelo.addColumn("dni_cliente");
+        modelo.addColumn("telefono_cliente");
+        modelo.addColumn("correo_cliente");
+        table.setModel(modelo);
+        
+        String sql="SELECT * FROM cliente WHERE concat(nombre_cliente, '',apellido_cliente) LIKE '%"+valor+"%'";
+        
+        String datos[]=new String[6];
+        
+        Statement st;
+        
+        try {
+            st= cn.createStatement();
+            
+            ResultSet rs=st.executeQuery(sql);
+            
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                
+                modelo.addRow(datos);
+            }
+            
+           table.setModel(modelo);
+            
+        } catch (SQLException e) {
+            
+            System.err.println("Error en el llamado de la tabla... "+e);
+            
+            JOptionPane.showMessageDialog(null,"Error en el llamado de la tabla");
+            
+        }
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,7 +115,7 @@ public class clientTable extends javax.swing.JFrame {
         apellidoClienteTxt = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         lDniCliente = new javax.swing.JLabel();
-        dniClienteText = new javax.swing.JTextField();
+        dniClienteTxt = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
         lTelefonoCliente = new javax.swing.JLabel();
         telefonoClienteTxt = new javax.swing.JTextField();
@@ -55,10 +123,14 @@ public class clientTable extends javax.swing.JFrame {
         lCorreoCliente = new javax.swing.JLabel();
         correoClienteTxt = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
+        cleanTxt = new javax.swing.JButton();
+        updateTxt = new javax.swing.JButton();
+        deleteTxt = new javax.swing.JButton();
         closeButton = new javax.swing.JPanel();
         closeText = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablePanel = new javax.swing.JPanel();
+        table1 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -154,7 +226,7 @@ public class clientTable extends javax.swing.JFrame {
 
         lDniCliente.setText("dni_cliente:");
 
-        dniClienteText.setBorder(null);
+        dniClienteTxt.setBorder(null);
 
         lTelefonoCliente.setText("telefono_cliente:");
 
@@ -163,6 +235,18 @@ public class clientTable extends javax.swing.JFrame {
         lCorreoCliente.setText("correo_cliente:");
 
         correoClienteTxt.setBorder(null);
+
+        cleanTxt.setBackground(new java.awt.Color(0, 134, 190));
+        cleanTxt.setForeground(new java.awt.Color(255, 255, 255));
+        cleanTxt.setText("Limpiar");
+
+        updateTxt.setBackground(new java.awt.Color(0, 134, 190));
+        updateTxt.setForeground(new java.awt.Color(255, 255, 255));
+        updateTxt.setText("Actualizar");
+
+        deleteTxt.setBackground(new java.awt.Color(0, 134, 190));
+        deleteTxt.setForeground(new java.awt.Color(255, 255, 255));
+        deleteTxt.setText("Eliminar");
 
         javax.swing.GroupLayout entriWhiteLayout = new javax.swing.GroupLayout(entriWhite);
         entriWhite.setLayout(entriWhiteLayout);
@@ -190,17 +274,24 @@ public class clientTable extends javax.swing.JFrame {
                     .addGroup(entriWhiteLayout.createSequentialGroup()
                         .addComponent(lDniCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dniClienteText))
+                        .addComponent(dniClienteTxt))
                     .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entriWhiteLayout.createSequentialGroup()
                         .addComponent(lTelefonoCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(telefonoClienteTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
+                        .addComponent(telefonoClienteTxt))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entriWhiteLayout.createSequentialGroup()
                         .addComponent(lCorreoCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(correoClienteTxt))
-                    .addComponent(jSeparator6))
+                    .addComponent(jSeparator6)
+                    .addGroup(entriWhiteLayout.createSequentialGroup()
+                        .addComponent(cleanTxt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(updateTxt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(deleteTxt)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         entriWhiteLayout.setVerticalGroup(
@@ -227,7 +318,7 @@ public class clientTable extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(entriWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lDniCliente)
-                    .addComponent(dniClienteText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dniClienteTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -242,7 +333,12 @@ public class clientTable extends javax.swing.JFrame {
                     .addComponent(correoClienteTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(entriWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cleanTxt)
+                    .addComponent(updateTxt)
+                    .addComponent(deleteTxt))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout entryLayout = new javax.swing.GroupLayout(entry);
@@ -265,7 +361,7 @@ public class clientTable extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        background.add(entry, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 270, 330));
+        background.add(entry, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 280, 330));
 
         closeButton.setBackground(new java.awt.Color(255, 255, 255));
         closeButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -310,7 +406,9 @@ public class clientTable extends javax.swing.JFrame {
 
         background.add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablePanel.setBackground(new java.awt.Color(0, 134, 190));
+
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -321,9 +419,25 @@ public class clientTable extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        table1.setViewportView(table);
 
-        background.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 520, 330));
+        javax.swing.GroupLayout tablePanelLayout = new javax.swing.GroupLayout(tablePanel);
+        tablePanel.setLayout(tablePanelLayout);
+        tablePanelLayout.setHorizontalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tablePanelLayout.createSequentialGroup()
+                .addComponent(table1, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        tablePanelLayout.setVerticalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tablePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(table1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        background.add(tablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 510, 330));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -447,21 +561,21 @@ public class clientTable extends javax.swing.JFrame {
     private javax.swing.JLabel backText;
     private javax.swing.JPanel background;
     private javax.swing.JPanel barra;
+    private javax.swing.JButton cleanTxt;
     private javax.swing.JPanel closeButton;
     private javax.swing.JLabel closeText;
     private javax.swing.JTextField correoClienteTxt;
-    private javax.swing.JTextField dniClienteText;
+    private javax.swing.JButton deleteTxt;
+    private javax.swing.JTextField dniClienteTxt;
     private javax.swing.JPanel entriWhite;
     private javax.swing.JPanel entry;
     private javax.swing.JTextField idClienteTxt;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lApellidoCliente;
     private javax.swing.JLabel lCorreoCliente;
     private javax.swing.JLabel lDniCliente;
@@ -469,7 +583,15 @@ public class clientTable extends javax.swing.JFrame {
     private javax.swing.JLabel lTelefonoCliente;
     private javax.swing.JLabel lidCliente;
     private javax.swing.JTextField nombreClienteTxt;
+    private javax.swing.JTable table;
+    private javax.swing.JScrollPane table1;
+    private javax.swing.JPanel tablePanel;
     private javax.swing.JTextField telefonoClienteTxt;
     private javax.swing.JLabel title;
+    private javax.swing.JButton updateTxt;
     // End of variables declaration//GEN-END:variables
+    Conectar con=new Conectar();
+    Connection cn=con.conexion();
+
+
 }

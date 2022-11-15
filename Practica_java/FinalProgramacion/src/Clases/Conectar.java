@@ -20,7 +20,7 @@ public class Conectar {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             
-            cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/bd","root","");
+            cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bd","root","");
             System.out.println("Conectado");
         } catch (Exception e) {
             System.out.println("No se pudo realizar la conexión");
