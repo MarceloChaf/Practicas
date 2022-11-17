@@ -20,6 +20,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -89,7 +90,7 @@ public class Login extends javax.swing.JFrame {
         background.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
         nameUser.setForeground(new java.awt.Color(204, 204, 204));
-        nameUser.setText("INGRESE EL NOMBRE DE USUARIO");
+        nameUser.setText("root");
         nameUser.setBorder(null);
         nameUser.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -110,7 +111,7 @@ public class Login extends javax.swing.JFrame {
         background.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 450, 10));
 
         passUser.setForeground(new java.awt.Color(204, 204, 204));
-        passUser.setText("******");
+        passUser.setText(" ");
         passUser.setBorder(null);
         passUser.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {

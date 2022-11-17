@@ -17,6 +17,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -72,6 +73,11 @@ public class Principal extends javax.swing.JFrame {
         coinButton.setBackground(new java.awt.Color(0, 134, 190));
         coinButton.setForeground(new java.awt.Color(255, 255, 255));
         coinButton.setText("Moneda");
+        coinButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coinButtonActionPerformed(evt);
+            }
+        });
         Background.add(coinButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
 
         staffButton.setBackground(new java.awt.Color(0, 134, 190));
@@ -156,6 +162,9 @@ public class Principal extends javax.swing.JFrame {
 
     private void staffButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffButtonActionPerformed
         // TODO add your handling code here:
+        personalTable personal=new personalTable();
+        personal.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_staffButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
@@ -186,7 +195,15 @@ public class Principal extends javax.swing.JFrame {
 
     private void uAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uAccountButtonActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_uAccountButtonActionPerformed
+
+    private void coinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coinButtonActionPerformed
+        // TODO add your handling code here:
+        coinTable coin=new coinTable();
+        coin.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_coinButtonActionPerformed
 
     /**
      * @param args the command line arguments

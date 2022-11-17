@@ -12,6 +12,9 @@ import java.sql.DriverManager;
  * @author MarceloWin
  */
 public class Conectar {
+    
+    public static String user = "root";
+    public static String pass = "";
      
     Connection cn;
     
@@ -20,8 +23,9 @@ public class Conectar {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             
-            cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bd","root","");
+            cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bd",user,pass);
             System.out.println("Conectado");
+            
         } catch (Exception e) {
             System.out.println("No se pudo realizar la conexión");
             System.err.println(e.getMessage());

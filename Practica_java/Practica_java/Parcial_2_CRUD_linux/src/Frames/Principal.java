@@ -47,14 +47,14 @@ public class Principal extends javax.swing.JFrame {
         
         DefaultTableModel modelo=new DefaultTableModel();
         
-        modelo.addColumn("d_empleado");
+        modelo.addColumn("id");
         modelo.addColumn("nombre_empleado");
         modelo.addColumn("apellido_empleado");
         modelo.addColumn("direccion_empleado");
         modelo.addColumn("telefono_empleado");
         tabla.setModel(modelo);
         
-        String sql="SELECT * FROM empleados WHERE concat(nombre_empleado, '',apellido_empleado) LIKE '%"+valor+"%'";
+        String sql="SELECT * FROM cliente WHERE concat(nombre_cliente, '',apellido_cliente) LIKE '%"+valor+"%'";
         
         String datos[]=new String[5];
         
@@ -154,6 +154,12 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Telefono");
+
+        txtid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtidActionPerformed(evt);
+            }
+        });
 
         btnguardar.setText("Guardar");
         btnguardar.addActionListener(new java.awt.event.ActionListener() {
@@ -337,6 +343,7 @@ public class Principal extends javax.swing.JFrame {
             
         }
         
+
         
     }//GEN-LAST:event_btnguardarActionPerformed
 
@@ -437,6 +444,10 @@ public class Principal extends javax.swing.JFrame {
                 }
 
     }//GEN-LAST:event_popborrarActionPerformed
+
+    private void txtidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtidActionPerformed
 
     /**
      * @param args the command line arguments

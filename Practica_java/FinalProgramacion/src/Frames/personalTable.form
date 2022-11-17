@@ -188,36 +188,36 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="lidCliente" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="idClienteTxt" max="32767" attributes="0"/>
+                                  <Component id="idPersonalTxt" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jSeparator2" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="lNombreCliente" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="nombreClienteTxt" max="32767" attributes="0"/>
+                                  <Component id="nombrePersonalTxt" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jSeparator4" alignment="1" max="32767" attributes="0"/>
                               <Component id="jSeparator3" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="lApellidoCliente" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="apellidoClienteTxt" max="32767" attributes="0"/>
+                                  <Component id="apellidoPersonalTxt" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="lDniCliente" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="dniClienteTxt" max="32767" attributes="0"/>
+                                  <Component id="dniPersonalTxt" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jSeparator5" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="lTelefonoCliente" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="telefonoClienteTxt" max="32767" attributes="0"/>
+                                  <Component id="telefonoPersonalTxt" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="lCorreoCliente" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="correoClienteTxt" max="32767" attributes="0"/>
+                                  <Component id="correoPersonalTxt" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jSeparator6" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
@@ -239,42 +239,42 @@
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lidCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="idClienteTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="idPersonalTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jSeparator1" min="-2" pref="12" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lNombreCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="nombreClienteTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="nombrePersonalTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jSeparator2" min="-2" pref="12" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lApellidoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="apellidoClienteTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="apellidoPersonalTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jSeparator4" min="-2" pref="12" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lDniCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="dniClienteTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="dniPersonalTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jSeparator3" min="-2" pref="12" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lTelefonoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="telefonoClienteTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="telefonoPersonalTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jSeparator5" min="-2" pref="12" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lCorreoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="correoClienteTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="correoPersonalTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jSeparator6" min="-2" pref="12" max="-2" attributes="0"/>
@@ -296,7 +296,7 @@
                     <Property name="text" type="java.lang.String" value="Id_cliente:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="idClienteTxt">
+                <Component class="javax.swing.JTextField" name="idPersonalTxt">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -312,7 +312,7 @@
                     <Property name="text" type="java.lang.String" value="Nombre:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="nombreClienteTxt">
+                <Component class="javax.swing.JTextField" name="nombrePersonalTxt">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -327,7 +327,7 @@
                     <Property name="text" type="java.lang.String" value="Apellido:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="apellidoClienteTxt">
+                <Component class="javax.swing.JTextField" name="apellidoPersonalTxt">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -342,7 +342,7 @@
                     <Property name="text" type="java.lang.String" value="Dni:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="dniClienteTxt">
+                <Component class="javax.swing.JTextField" name="dniPersonalTxt">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -357,7 +357,7 @@
                     <Property name="text" type="java.lang.String" value="Telefono:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="telefonoClienteTxt">
+                <Component class="javax.swing.JTextField" name="telefonoPersonalTxt">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -372,7 +372,7 @@
                     <Property name="text" type="java.lang.String" value="Correo:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="correoClienteTxt">
+                <Component class="javax.swing.JTextField" name="correoPersonalTxt">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -455,7 +455,10 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="closeText" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="closeText" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>

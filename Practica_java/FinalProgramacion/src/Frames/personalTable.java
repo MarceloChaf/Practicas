@@ -19,14 +19,14 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author marcelo
  */
-public class clientTable extends javax.swing.JFrame {
+public class personalTable extends javax.swing.JFrame {
     
     int xMouse,yMouse;
 
     /**
      * Creates new form clientTable
      */
-    public clientTable() {
+    public personalTable() {
         initComponents();
         this.setLocationRelativeTo(null);
         limpiar();
@@ -36,12 +36,12 @@ public class clientTable extends javax.swing.JFrame {
     }
     
     void limpiar(){
-        idClienteTxt.setText("");
-        apellidoClienteTxt.setText("");
-        nombreClienteTxt.setText("");
-        telefonoClienteTxt.setText("");
-        correoClienteTxt.setText("");
-        dniClienteTxt.setText("");
+        idPersonalTxt.setText("");
+        apellidoPersonalTxt.setText("");
+        nombrePersonalTxt.setText("");
+        telefonoPersonalTxt.setText("");
+        correoPersonalTxt.setText("");
+        dniPersonalTxt.setText("");
         System.out.println("funco");
     }
 
@@ -58,7 +58,7 @@ public class clientTable extends javax.swing.JFrame {
         table.setModel(modelo);
         
         System.out.println("primera");
-        String sql="SELECT * FROM cliente WHERE concat(nombre_cliente, '',apellido_cliente) LIKE '%"+valor+"%'";
+        String sql="SELECT * FROM personal WHERE concat(nombre_personal, '',apellido_personal) LIKE '%"+valor+"%'";
         
         String datos[]=new String[6];
         System.out.println("segunda");
@@ -109,22 +109,22 @@ public class clientTable extends javax.swing.JFrame {
         title = new javax.swing.JLabel();
         entriWhite = new javax.swing.JPanel();
         lidCliente = new javax.swing.JLabel();
-        idClienteTxt = new javax.swing.JTextField();
+        idPersonalTxt = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         lNombreCliente = new javax.swing.JLabel();
-        nombreClienteTxt = new javax.swing.JTextField();
+        nombrePersonalTxt = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         lApellidoCliente = new javax.swing.JLabel();
-        apellidoClienteTxt = new javax.swing.JTextField();
+        apellidoPersonalTxt = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         lDniCliente = new javax.swing.JLabel();
-        dniClienteTxt = new javax.swing.JTextField();
+        dniPersonalTxt = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
         lTelefonoCliente = new javax.swing.JLabel();
-        telefonoClienteTxt = new javax.swing.JTextField();
+        telefonoPersonalTxt = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
         lCorreoCliente = new javax.swing.JLabel();
-        correoClienteTxt = new javax.swing.JTextField();
+        correoPersonalTxt = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
         cleanTxt = new javax.swing.JButton();
         updateTxt = new javax.swing.JButton();
@@ -218,33 +218,33 @@ public class clientTable extends javax.swing.JFrame {
         lidCliente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lidCliente.setText("Id_cliente:");
 
-        idClienteTxt.setEditable(false);
-        idClienteTxt.setBorder(null);
+        idPersonalTxt.setEditable(false);
+        idPersonalTxt.setBorder(null);
 
         lNombreCliente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lNombreCliente.setText("Nombre:");
 
-        nombreClienteTxt.setBorder(null);
+        nombrePersonalTxt.setBorder(null);
 
         lApellidoCliente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lApellidoCliente.setText("Apellido:");
 
-        apellidoClienteTxt.setBorder(null);
+        apellidoPersonalTxt.setBorder(null);
 
         lDniCliente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lDniCliente.setText("Dni:");
 
-        dniClienteTxt.setBorder(null);
+        dniPersonalTxt.setBorder(null);
 
         lTelefonoCliente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lTelefonoCliente.setText("Telefono:");
 
-        telefonoClienteTxt.setBorder(null);
+        telefonoPersonalTxt.setBorder(null);
 
         lCorreoCliente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lCorreoCliente.setText("Correo:");
 
-        correoClienteTxt.setBorder(null);
+        correoPersonalTxt.setBorder(null);
 
         cleanTxt.setBackground(new java.awt.Color(0, 134, 190));
         cleanTxt.setForeground(new java.awt.Color(255, 255, 255));
@@ -284,31 +284,31 @@ public class clientTable extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entriWhiteLayout.createSequentialGroup()
                         .addComponent(lidCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(idClienteTxt))
+                        .addComponent(idPersonalTxt))
                     .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entriWhiteLayout.createSequentialGroup()
                         .addComponent(lNombreCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nombreClienteTxt))
+                        .addComponent(nombrePersonalTxt))
                     .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entriWhiteLayout.createSequentialGroup()
                         .addComponent(lApellidoCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(apellidoClienteTxt))
+                        .addComponent(apellidoPersonalTxt))
                     .addGroup(entriWhiteLayout.createSequentialGroup()
                         .addComponent(lDniCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dniClienteTxt))
+                        .addComponent(dniPersonalTxt))
                     .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entriWhiteLayout.createSequentialGroup()
                         .addComponent(lTelefonoCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(telefonoClienteTxt))
+                        .addComponent(telefonoPersonalTxt))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entriWhiteLayout.createSequentialGroup()
                         .addComponent(lCorreoCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(correoClienteTxt))
+                        .addComponent(correoPersonalTxt))
                     .addComponent(jSeparator6)
                     .addGroup(entriWhiteLayout.createSequentialGroup()
                         .addComponent(cleanTxt)
@@ -325,37 +325,37 @@ public class clientTable extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(entriWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lidCliente)
-                    .addComponent(idClienteTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(idPersonalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(entriWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lNombreCliente)
-                    .addComponent(nombreClienteTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombrePersonalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(entriWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lApellidoCliente)
-                    .addComponent(apellidoClienteTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(apellidoPersonalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(entriWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lDniCliente)
-                    .addComponent(dniClienteTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dniPersonalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(entriWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lTelefonoCliente)
-                    .addComponent(telefonoClienteTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(telefonoPersonalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(entriWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lCorreoCliente)
-                    .addComponent(correoClienteTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(correoPersonalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -426,7 +426,9 @@ public class clientTable extends javax.swing.JFrame {
         );
         closeButtonLayout.setVerticalGroup(
             closeButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(closeText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(closeButtonLayout.createSequentialGroup()
+                .addComponent(closeText)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         background.add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
@@ -554,14 +556,14 @@ public class clientTable extends javax.swing.JFrame {
     private void updateTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateTxtActionPerformed
         // TODO add your handling code here:
         try {
-            PreparedStatement ps=cn.prepareStatement("INSERT INTO cliente (nombre_cliente,apellido_cliente,telefono_cliente,correo_cliente,dni_cliente)VALUES  (?,?,?,?,?)");
+            PreparedStatement ps=cn.prepareStatement("INSERT INTO personal (nombre_personal,apellido_personal,telefono_personal,correo_personal,dni_personal)VALUES  (?,?,?,?,?)");
             
 
-            ps.setString(1,nombreClienteTxt.getText() );
-            ps.setString(2,apellidoClienteTxt.getText() );
-            ps.setString(3,telefonoClienteTxt.getText() );
-            ps.setString(4,correoClienteTxt.getText() );
-            ps.setString(5,dniClienteTxt.getText() );
+            ps.setString(1,nombrePersonalTxt.getText() );
+            ps.setString(2,apellidoPersonalTxt.getText() );
+            ps.setString(3,telefonoPersonalTxt.getText() );
+            ps.setString(4,correoPersonalTxt.getText() );
+            ps.setString(5,dniPersonalTxt.getText() );
             
             ps.executeUpdate();
             
@@ -582,7 +584,7 @@ public class clientTable extends javax.swing.JFrame {
                 try {
                     
                     System.out.println("pisculichi");
-                    PreparedStatement ps=cn.prepareStatement ("UPDATE cliente SET nombre_Cliente='"+nombreClienteTxt.getText()+"',apellido_cliente='"+apellidoClienteTxt.getText()+"',dni_cliente='"+dniClienteTxt.getText()+"',telefono_cliente='"+telefonoClienteTxt.getText()+"',correo_cliente='"+correoClienteTxt.getText()+"' where id_cliente='"+idClienteTxt.getText()+"'");
+                    PreparedStatement ps=cn.prepareStatement ("UPDATE personal SET nombre_personal='"+nombrePersonalTxt.getText()+"',apellido_personal='"+apellidoPersonalTxt.getText()+"',dni_personal='"+dniPersonalTxt.getText()+"',telefono_personal='"+telefonoPersonalTxt.getText()+"',correo_personal='"+correoPersonalTxt.getText()+"' where id_personal='"+idPersonalTxt.getText()+"'");
                     
             int respuesta=ps.executeUpdate();
             
@@ -603,12 +605,12 @@ public class clientTable extends javax.swing.JFrame {
         // TODO add your handling code here:
         int fila=this.table.getSelectedRow();
         
-        this.idClienteTxt.setText(this.table.getValueAt(fila,0).toString());
-        this.nombreClienteTxt.setText(this.table.getValueAt(fila,1).toString());
-        this.apellidoClienteTxt.setText(this.table.getValueAt(fila,2).toString());
-        this.dniClienteTxt.setText(this.table.getValueAt(fila,3).toString());
-        this.telefonoClienteTxt.setText(this.table.getValueAt(fila,4).toString());
-        this.correoClienteTxt.setText(this.table.getValueAt(fila,5).toString());
+        this.idPersonalTxt.setText(this.table.getValueAt(fila,0).toString());
+        this.nombrePersonalTxt.setText(this.table.getValueAt(fila,1).toString());
+        this.apellidoPersonalTxt.setText(this.table.getValueAt(fila,2).toString());
+        this.dniPersonalTxt.setText(this.table.getValueAt(fila,3).toString());
+        this.telefonoPersonalTxt.setText(this.table.getValueAt(fila,4).toString());
+        this.correoPersonalTxt.setText(this.table.getValueAt(fila,5).toString());
         
         
     }//GEN-LAST:event_tableMouseClicked
@@ -618,7 +620,7 @@ public class clientTable extends javax.swing.JFrame {
         int eleccion = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea eliminar este registro?");
             if (eleccion==JOptionPane.YES_OPTION) {
                 try {
-                    PreparedStatement ps=cn.prepareStatement ("DELETE FROM cliente WHERE id_cliente='"+idClienteTxt.getText()+"'");
+                    PreparedStatement ps=cn.prepareStatement ("DELETE FROM personal WHERE id_personal='"+idPersonalTxt.getText()+"'");
                     int respuesta=ps.executeUpdate();
                     if (respuesta>0) {
                         
@@ -663,26 +665,27 @@ public class clientTable extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(clientTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(personalTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(clientTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(personalTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(clientTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(personalTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(clientTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(personalTable.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new clientTable().setVisible(true);
+                new personalTable().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField apellidoClienteTxt;
+    private javax.swing.JTextField apellidoPersonalTxt;
     private javax.swing.JPanel backButton;
     private javax.swing.JLabel backText;
     private javax.swing.JPanel background;
@@ -690,12 +693,12 @@ public class clientTable extends javax.swing.JFrame {
     private javax.swing.JButton cleanTxt;
     private javax.swing.JPanel closeButton;
     private javax.swing.JLabel closeText;
-    private javax.swing.JTextField correoClienteTxt;
+    private javax.swing.JTextField correoPersonalTxt;
     private javax.swing.JButton deleteTxt;
-    private javax.swing.JTextField dniClienteTxt;
+    private javax.swing.JTextField dniPersonalTxt;
     private javax.swing.JPanel entriWhite;
     private javax.swing.JPanel entry;
-    private javax.swing.JTextField idClienteTxt;
+    private javax.swing.JTextField idPersonalTxt;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -708,11 +711,11 @@ public class clientTable extends javax.swing.JFrame {
     private javax.swing.JLabel lNombreCliente;
     private javax.swing.JLabel lTelefonoCliente;
     private javax.swing.JLabel lidCliente;
-    private javax.swing.JTextField nombreClienteTxt;
+    private javax.swing.JTextField nombrePersonalTxt;
     private javax.swing.JTable table;
     private javax.swing.JScrollPane table1;
     private javax.swing.JPanel tablePanel;
-    private javax.swing.JTextField telefonoClienteTxt;
+    private javax.swing.JTextField telefonoPersonalTxt;
     private javax.swing.JLabel title;
     private javax.swing.JButton updateTxt;
     // End of variables declaration//GEN-END:variables
