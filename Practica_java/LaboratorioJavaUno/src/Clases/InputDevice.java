@@ -12,9 +12,9 @@ public abstract class InputDevice{
     
     protected String inputType,brand;
     
-    public InputDevice(String marca, String tipoEntrada){
-        this.brand=marca;
-        this.inputType=tipoEntrada;    
+    public InputDevice(String brand, String inputType){
+        this.brand=brand;
+        this.inputType=inputType;    
     }
 
     public String getTipoEntrada() {
