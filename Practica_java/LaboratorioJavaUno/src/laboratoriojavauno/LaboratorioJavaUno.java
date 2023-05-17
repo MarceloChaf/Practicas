@@ -14,7 +14,8 @@ public class LaboratorioJavaUno {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("perro loco");
+        System.out.println("a");
     }
     
 }
