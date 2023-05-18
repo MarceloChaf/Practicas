@@ -1,48 +1,41 @@
 package mx.com.gm.peliculas.negocio;
 
 import mx.com.gm.peliculas.datos.AccesoDatos;
+import mx.com.gm.peliculas.datos.AccesoDatosImpl;
 import mx.com.gm.peliculas.domain.Pelicula;
+import mx.com.gm.peliculas.excepciones.AccesoDatosEx;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.util.List;
-
-public class CatalagoPeliculasImpl implements AccesoDatos {
-    @Override
-    public boolean Existe(String nombreArchivo) {
-        return false;
+public class CatalagoPeliculasImpl implements CatalagoPeliculas {
+    private final AccesoDatos datos;
+    public CatalagoPeliculasImpl() {
+        this.datos=new AccesoDatosImpl();
     }
 
     @Override
-    public List<Pelicula> listar() {
-        return null;
-    }
-
-    @Override
-    public void escribir(Pelicula pelicula, String nombre, boolean anexar) {
-
-    }
-
-    @Override
-    public String buscar(String nombreArchivo, String buscar) {
-        return null;
-    }
-
-    @Override
-    public void crear(String nombreArchivo) {
-        File archivo=new File(nombreArchivo);
+    public void agregarPelicula(String nombrerePelicula) {
+        Pelicula pelicula=new Pelicula(nombrerePelicula);
+        boolean anexar=false;
         try {
-            PrintWriter salida = new PrintWriter(archivo);
-            System.out.println("Se creo el archivo correctamente");
-        }catch(FileNotFoundException ex){
+            anexar= datos.Existe(Nombre_recurso);
+        }catch (AccesoDatosEx ex){
+            System.out.println("Error de acceso a datos");
             ex.printStackTrace(System.out);
         }
 
     }
 
     @Override
-    public void borrar(String nombreArchivo) {
+    public void listarPelicular() {
+
+    }
+
+    @Override
+    public void buscar(String vuscar) {
+
+    }
+
+    @Override
+    public void iniciarCatalogPeliculas() {
 
     }
 }

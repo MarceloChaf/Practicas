@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e9798fa-320e-43e6-bd16-53e7a8288a4d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/datos/AccesoDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/datos/AccesoDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/datos/AccesoDatosImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/datos/AccesoDatosImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/domain/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/domain/Pelicula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/negocio/CatalagoPeliculas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/negocio/CatalagoPeliculas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/negocio/CatalagoPeliculasImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/negocio/CatalagoPeliculasImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2PwUaPgcCiZdvYFto49r5p4kzqI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e9798fa-320e-43e6-bd16-53e7a8288a4d" name="Changes" comment="" />
+      <created>1684367705700</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684367705700</updated>
+    </task>
+    <servers />
+  </component>
+</project>

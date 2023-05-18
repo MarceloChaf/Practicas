@@ -2,37 +2,16 @@ package mx.com.gm.peliculas.negocio;
 
 import mx.com.gm.peliculas.datos.AccesoDatos;
 import mx.com.gm.peliculas.domain.Pelicula;
+import mx.com.gm.peliculas.excepciones.LecturaDatosEx;
 
 import java.util.List;
 
-public class CatalagoPeliculas implements AccesoDatos {
-    @Override
-    public boolean Existe(String nombreArchivo) {
-         return false;
-    }
+public interface CatalagoPeliculas  {
+    String Nombre_recurso="peliculas.txt";
 
-    @Override
-    public List<Pelicula> listar() {
-        return null;
-    }
-
-    @Override
-    public void escribir(Pelicula pelicula, String nombre, boolean anexar) {
-
-    }
-
-    @Override
-    public String buscar(String nombreArchivo, String buscar) {
-        return null;
-    }
-
-    @Override
-    public void crear(String nombreArchivo) {
-
-    }
-
-    @Override
-    public void borrar(String nombreArchivo) {
-
-    }
+    void agregarPelicula(String nombrerePelicula);
+    void listarPelicular();
+    void buscar(String vuscar);
+    void iniciarCatalogPeliculas();
 }
+

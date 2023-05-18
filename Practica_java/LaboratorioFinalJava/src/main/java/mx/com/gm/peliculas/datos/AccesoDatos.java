@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface AccesoDatos {
 
-    boolean Existe(String nombreArchivo) throws AccesoDatosEx;
-    List<Pelicula> listar() throws LecturaDatosEx;
+    boolean Existe(String nombreArchivo);
+    List<Pelicula> listar(String nombreArchivo) throws LecturaDatosEx;
 
     void escribir(Pelicula pelicula , String nombre ,boolean anexar) throws EscrituraDatosEx;
 

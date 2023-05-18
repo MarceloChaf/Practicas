@@ -14,9 +14,8 @@ public class Pelicula implements Serializable {
 
     @Override
     public String toString() {
-        return "Pelicula{" +
-                "name='" + name + '\'' +
-                '}';
+        return  this.name;
+
     }
 
     public String getName() {
