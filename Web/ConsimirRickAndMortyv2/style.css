@@ -1,0 +1,60 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+.body{
+    background-color: black;
+}
+.row{
+    background-color: black;
+}
+.card-body{
+    background-color: white;
+}
+
+.card-text{
+    background-color: white;
+}
+
+.card-title{
+    background-color: white;
+}
+
+.tab-content {
+    background-color: black; /* Cambia el color de fondo a tu preferencia */
+  }
+
+#episode-table{
+    background-color: white;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .footer{
+    background-color: black;
+  }
+  .card {
+    width: 200px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  h3 {
+    margin-top: 0;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }

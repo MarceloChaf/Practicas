@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e9798fa-320e-43e6-bd16-53e7a8288a4d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/datos/AccesoDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/datos/AccesoDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/datos/AccesoDatosImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/datos/AccesoDatosImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/domain/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/domain/Pelicula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/negocio/CatalagoPeliculas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/negocio/CatalagoPeliculas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/negocio/CatalagoPeliculasImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/com/gm/peliculas/negocio/CatalagoPeliculasImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PreParcial/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PreParcial/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PreParcial/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PreParcial/nbproject/private/private.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +34,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/CURSOS/Codigo/Practicas/Practica_java/LaboratorioFinalJava",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
