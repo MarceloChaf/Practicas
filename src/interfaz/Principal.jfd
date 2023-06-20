@@ -1,0 +1,87 @@
+JFDML JFormDesigner: "8.1.0.0.283" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l {seq l {par l {comp btn7:::p:51:p, comp btnClean::l:p:51:p}, space :::p, par l {seq l {comp btn8:::p:51:p, space :::p, comp btn9:::p:51:p}, seq l {comp btn0:::p:51:p, space :::p, comp btnComa:::p:51:p}}, space :::p, par l {comp btnMultiplicacion:::p:51:p, comp btnDivision:::p:51:p}}, seq {comp btn1:::p:51:p, space :::p, comp btn2:::p:51:p, space :::p, comp btn3:::p:51:p, space :::p, comp btnSuma:::p:51:p}, par t:l {seq {comp txtField:::p:165:p, space :::p, comp btnResultado:::p:51:p}, seq l {comp btn4:::p:51:p, space :::p, comp btn5:::p:51:p, space :::p, comp btn6:::p:51:p, space :::p, comp btnResta:::p:51:p}}}, space ::10:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, par l:::p {comp btnResultado:::::x, comp txtField:::::x}, space :::p, par b {comp btn1::b:p:51:p, comp btn2::b:p:51:p, comp btn3::b:p:51:p, comp btnSuma::b:p:51:p}, space :::p, par b {comp btn4::b:p:51:p, comp btn5::b:p:51:p, comp btn6::b:p:51:p, comp btnResta::b:p:51:p}, space :::p, par b {comp btn7::b:p:51:p, comp btn8::b:p:51:p, comp btn9::b:p:51:p, comp btnDivision::b:p:51:p}, space :::x, par b {comp btn0::b:p:51:p, comp btnMultiplicacion::b:p:51:p, comp btnClean::b:p:51:p, comp btnComa::b:p:51:p}, space :::p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtField"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn1"
+				"text": "1"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn2"
+				"text": "2"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn3"
+				"text": "3"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn4"
+				"text": "4"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn5"
+				"text": "5"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn6"
+				"text": "6"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn7"
+				"text": "7"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn8"
+				"text": "8"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn9"
+				"text": "9"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn0"
+				"text": "0"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnSuma"
+				"text": "+"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnResta"
+				"text": "-"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnDivision"
+				"text": "/"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnMultiplicacion"
+				"text": "*"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnClean"
+				"text": "Clean"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnComa"
+				"text": ","
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnResultado"
+				"text": "="
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 240, 300 )
+		} )
+	}
+}
