@@ -36,9 +36,7 @@
     justify-content: center;
     gap: 20px;
   }
-  .footer{
-    background-color: black;
-  }
+
   .card {
     width: 200px;
     padding: 10px;

@@ -18,16 +18,7 @@ function obtenerDatosPokeAPI() {
   
         // Limpia el contenido actual en caso de que haya datos anteriores
         otraApiSection.innerHTML = '';
-        for (let i = 0; i < 9; i++) {
-            while (true) {
-                random=getRandomInt(20);
-                if (lugares.indexOf(random) === -1) {
-                    lugares.push(random);
-                    break
-                }
-            }
-            
-            const pokemon = pokemon[random];
+        
         // Crea un contenedor para las tarjetas de los Pokémon
         const cardContainer = document.createElement('div');
         cardContainer.classList.add('card-container');

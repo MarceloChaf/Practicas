@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+  }
+  
+  .div1, .div2 {
+    flex: 1;
+  }
+  
+  .div2 {
+    border: 20px;
+    border-color: blue;
+    background-color: burlywood;
+  }
