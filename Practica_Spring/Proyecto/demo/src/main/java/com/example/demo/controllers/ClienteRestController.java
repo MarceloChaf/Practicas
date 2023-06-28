@@ -42,6 +42,7 @@ public class ClienteRestController {
         currentCliente.setNombre(cliente.getNombre());
         currentCliente.setApellido(cliente.getApellido());
         currentCliente.setEmail(cliente.getEmail());
+        currentCliente.setCompraList(cliente.getCompraList());
         this.clienteService.save(currentCliente);
         return currentCliente;
     }
